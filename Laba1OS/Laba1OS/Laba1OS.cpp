@@ -10,16 +10,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	_tsetlocale(LC_ALL, _T("Russian"));
 	int result = sizeof(TCHAR);
 	if (result == 2)
-		printf("%s", "UNICODE\n");
+		printf("%s. Size of TCHAR = %d\n", "UNICODE", sizeof(TCHAR));//2 bytes
 	else
-		printf("%s", "ANSI\n");
+		printf("%s. Size of TCHAR = %d\n", "ANSI", sizeof(TCHAR)); //1 byte
 
-	TCHAR * Names[] = { _T("Васильев Дмитрий Геннадиевич"), _T("Журавок Михаил Геннадиевич"), _T("Васильева Татьяна Михайловна"), _T("Журавок Елена Владимировна") };
-	printf("sizeof(names): %d\n", sizeof(Names));
+	char * Names[] = { "Васильев Дмитрий Геннадиевич", "Журавок Михаил Геннадиевич", "Васильева Татьяна Михайловна", "Журавок Елена Владимировна" };
+	printf("sizeof(names): %d\n", sizeof("Васильев Дмитрий Геннадиевич"));
 	printf("sizeof(names[0]): %d\n", sizeof(Names[0]));
 	printf("Кол-во элементов в массиве: %d\n", sizeof(Names) / sizeof(Names[0]));
 	for (int i = 0; i < sizeof(Names) / sizeof(Names[0]); i++)
-		/*_tprintf("%c\n", Names[i]);*/
-
-
+		printf("%s\n", Names[i]);
 }
