@@ -1,4 +1,4 @@
-// Laba1OS.cpp: определяет точку входа для консольного приложения.
+п»ї// Laba1OS.cpp: РѕРїСЂРµРґРµР»СЏРµС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РґР»СЏ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ.
 //
 
 #include "stdafx.h"
@@ -14,10 +14,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	else
 		printf("%s. Size of TCHAR = %d\n", "ANSI", sizeof(TCHAR)); //1 byte
 
-	char * Names[] = { "Васильев Дмитрий Геннадиевич", "Журавок Михаил Геннадиевич", "Васильева Татьяна Михайловна", "Журавок Елена Владимировна" };
-	printf("sizeof(names): %d\n", sizeof("Васильев Дмитрий Геннадиевич"));
-	printf("sizeof(names[0]): %d\n", sizeof(Names[0]));
-	printf("Кол-во элементов в массиве: %d\n", sizeof(Names) / sizeof(Names[0]));
+	char Names[2][35] = { "Р’Р°СЃРёР»СЊРµРІ Р”РјРёС‚СЂРёР№ Р“РµРЅРЅР°РґСЊРµРІРёС‡", "Р–СѓСЂР°РІРѕРє РњРёС€Р°РёР» РњРёС€Р°РёР»РѕРІРёС‡" }; // 2 СЃС‚СЂРѕРєРё РїРѕ 35 СЃРёРјРІРѕР»РѕРІ
 	for (int i = 0; i < sizeof(Names) / sizeof(Names[0]); i++)
 		printf("%s\n", Names[i]);
+	for (int i = 0; i < sizeof(Names) / sizeof(Names[0]); i++)
+		//MultiByteToWideChar();
+		;
 }
